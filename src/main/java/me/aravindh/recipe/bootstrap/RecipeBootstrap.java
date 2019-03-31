@@ -1,5 +1,6 @@
 package me.aravindh.recipe.bootstrap;
 
+import lombok.extern.slf4j.Slf4j;
 import me.aravindh.recipe.domain.*;
 import me.aravindh.recipe.repositories.CategoryRepository;
 import me.aravindh.recipe.repositories.RecipeRepository;
@@ -8,11 +9,13 @@ import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Component;
 
+import javax.transaction.Transactional;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+@Slf4j
 @Component
 public class RecipeBootstrap implements ApplicationListener<ContextRefreshedEvent> {
 
@@ -28,7 +31,9 @@ public class RecipeBootstrap implements ApplicationListener<ContextRefreshedEven
     }
 
     @Override
+    @Transactional
     public void onApplicationEvent(ContextRefreshedEvent event) {
+        log.debug("Loading Bootstrap data");
         recipeRepository.saveAll(getRecipes());
     }
 
