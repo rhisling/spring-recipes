@@ -6,6 +6,7 @@ import me.aravindh.recipe.repositories.RecipeRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
+import java.util.Optional;
 import java.util.Set;
 
 @Slf4j
@@ -24,5 +25,14 @@ public class RecipeServiceImpl implements RecipeService {
         Set<Recipe> recipeSet = new HashSet<>();
         recipeRepository.findAll().iterator().forEachRemaining(recipeSet::add);
         return recipeSet;
+    }
+
+    @Override
+    public Recipe findById(Long l) {
+        Optional<Recipe> recipeOpt = recipeRepository.findById(l);
+        if (!recipeOpt.isPresent())
+            throw new RuntimeException("Recipe not found");
+        return recipeOpt.get();
+
     }
 }

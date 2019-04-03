@@ -1,6 +1,8 @@
 package me.aravindh.recipe.domain;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 
 import javax.persistence.*;
 import java.util.HashSet;
@@ -8,6 +10,8 @@ import java.util.Set;
 
 @Data
 @Entity
+@EqualsAndHashCode(exclude = "ingredients")
+@ToString(exclude = {"ingredients","notes","categories"})
 public class Recipe {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
