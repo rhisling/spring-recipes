@@ -11,7 +11,7 @@ import java.util.Set;
 @Data
 @Entity
 @EqualsAndHashCode(exclude = "ingredients")
-@ToString(exclude = {"ingredients","notes","categories"})
+@ToString(exclude = {"ingredients", "notes", "categories"})
 public class Recipe {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -46,8 +46,10 @@ public class Recipe {
     private Set<Category> categories = new HashSet<>();
 
     public void setNotes(Notes notes) {
-        this.notes = notes;
-        notes.setRecipe(this);
+        if (notes != null) {
+            this.notes = notes;
+            notes.setRecipe(this);
+        }
     }
 
     public Recipe addIngredient(Ingredient ingredient) {
