@@ -119,7 +119,7 @@ public class RecipeBootstrap implements ApplicationListener<ContextRefreshedEven
                 "Add the chopped onion, cilantro, black pepper, and chiles. Chili peppers vary individually in their " +
                 "hotness. So, start with a half of one chili pepper and add to the guacamole to your desired degree " +
                 "of hotness.\n" +
-                "Remember that much of this is done to taste because of the variability in the fresh ingredients. " +
+                "Remember that much of this is done to taste because of the variability in the fresh ingredient. " +
                 "Start with this recipe and adjust to your taste.\n" +
                 "4 Cover with plastic and chill to store: Place plastic wrap on the surface of the guacamole cover it" +
                 " and to prevent air reaching it. (The oxygen in the air causes oxidation which will turn the " +
@@ -136,7 +136,7 @@ public class RecipeBootstrap implements ApplicationListener<ContextRefreshedEven
                 "Feel free to experiment! One classic Mexican guacamole has pomegranate seeds and chunks of peaches " +
                 "in it (a Diana Kennedy favorite). Try guacamole with added pineapple, mango, or strawberries.\n" +
                 "The simplest version of guacamole is just mashed avocados with salt. Don't let the lack of " +
-                "availability of other ingredients stop you from making guacamole.\n" +
+                "availability of other ingredient stop you from making guacamole.\n" +
                 "To extend a limited supply of avocados, add either sour cream or cottage cheese to your guacamole " +
                 "dip. Purists may be horrified, but so what? It tastes great.\n" +
                 "\n" +

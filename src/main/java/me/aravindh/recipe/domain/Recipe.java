@@ -10,8 +10,8 @@ import java.util.Set;
 
 @Data
 @Entity
-@EqualsAndHashCode(exclude = "ingredients")
-@ToString(exclude = {"ingredients", "notes", "categories"})
+@EqualsAndHashCode(exclude = "ingredient")
+@ToString(exclude = {"ingredient", "notes", "categories"})
 public class Recipe {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
